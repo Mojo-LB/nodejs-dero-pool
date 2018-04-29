@@ -13,10 +13,10 @@
     "funcFile": "./lib/coins/dero.js",
     "paymentFile": "./payment_systems/dero.js",
     "sigDigits": 1000000000000,
-    "shapeshift": "xmr_btc",
+    "shapeshift": "_btc",
     "xmrTo": false,
     "name": "Dero",
-    "mixIn": 5,
+    "mixIn": 8,
     "shortCode": "DERO"
   },
   "krb": {
