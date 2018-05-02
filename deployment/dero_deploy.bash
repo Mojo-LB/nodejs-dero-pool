@@ -22,11 +22,14 @@ sudo cmake .
 sudo make
 sudo mv libg* /usr/lib/
 cd ~
+wget http://seeds.dero.io/alpha/dero_linux_amd64.tar.gz
+tar -xvzf dero_linux_amd64.tar.gz
+sudo cp dero_linux_amd64/dero* /usr/local/bin/
 sudo systemctl enable ntp
 cd /usr/local/src
-sudo git clone https://github.com/ # Need to be added Dero Github Repository
-cd Dero
-sudo make -j$(nproc)
+#sudo git clone https://github.com/ # Need to be added Dero Github Repository
+#cd Dero
+#sudo make -j$(nproc)
 sudo cp ~/nodejs-pool/deployment/dero.service /lib/systemd/system/ # dero.service need to be updated
 sudo useradd -m pooldaemon -d /home/pooldaemon
 BLOCKCHAIN_DOWNLOAD_DIR=$(sudo -u graftdaemon mktemp -d)
